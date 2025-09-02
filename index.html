@@ -10,7 +10,9 @@
    
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/skill.css">
+   <link rel="stylesheet" href="css/skill.css">
+   <link rel="stylesheet" href="css/project.css">
+   <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -33,7 +35,7 @@
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About</a>
             <a href="#skills" style="--i:3">Skills</a>
-            <a href="#portfolio" style="--i:4">Portfolio</a>
+            <a href="#portfolio" style="--i:4">Project</a>
             <a href="#contact" style="--i:5">Contact</a>
         </nav>
 
@@ -66,11 +68,11 @@
     <!-- About page -->
     <section class="about" id="about">
 
-  <div class="about-img">
-    <img src="assets/Portfolio.png" alt="About Image">
-  </div>
+    <div class="about-img">
+      <img src="assets/Portfolio.png" alt="About Image">
+    </div>
 
-  <div class="about-content">
+    <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Full Stack Developer</h3>
         <p>
@@ -130,7 +132,55 @@
     </div>
   </div>
 </section>
+<!-- Project Section -->
+<section class="projects" id="portfolio">
+  <h2 class="heading">My <span>Projects</span></h2>
 
+  <div class="projects-container">
+
+    <div class="project-box">
+      <img src="assets/Project1.jpg" alt="Project 1">
+      <h4>Bookstore Management</h4>
+      <p>A full-stack web app using Java, Spring Boot, and MySQL to manage books and orders.</p>
+      <a href="#"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div class="project-box">
+      <img src="assets/Project1.jpg" alt="Project 2">
+      <h4>Hostel Management</h4>
+      <p>Java + Swing + MySQL based desktop application for hostel room allocation.</p>
+      <a href="#"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div class="project-box">
+      <img src="assets/Project1.jpg" alt="Project 3">
+      <h4>Tourist Hub App</h4>
+      <p>Flutter + Firebase app for booking and managing travel packages.</p>
+      <a href="#"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    
+  </div>
+</section>
+
+ <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <form action="#" class="contact-form">
+        <div class="input-box">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-box">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
