@@ -1,13 +1,13 @@
 /* Contact Section */
 .contact {
-  min-height: 100vh;       
-  width: 100%;             
+  min-height: 100vh;
+  width: 100%;
   padding: 80px 10% 40px;
   background: #1f242d;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
 }
 
 .contact h2 {
@@ -17,24 +17,20 @@
   color: #fff;
 }
 
-
-
+/* Contact Container */
 .contact-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* Animation */
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 1s ease-out forwards;
-  animation-fill-mode: forwards; /* keep final state after animation */
-  z-index: 20;  /* input stays clickable */
+  animation-fill-mode: forwards;
+  z-index: 20;
 }
 
-
-/* Keyframes for fade + slide */
+/* Animation */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -56,7 +52,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover Effect on Form */
+/* Hover Effect */
 .contact-form:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
@@ -100,4 +96,65 @@
 .contact-form .btn:hover {
   background: #fff;
   transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    max-width: 450px;
+    padding: 25px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .contact {
+    padding: 60px 5% 30px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  .contact-form .input-box input,
+  .contact-form .input-box textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .contact-form .btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+  .contact h2 {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .contact-form .btn {
+    font-size: 14px;
+  }
 }

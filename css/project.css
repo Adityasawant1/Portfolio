@@ -1,16 +1,16 @@
 /* Projects Section */
 .projects {
   min-height: 100vh;
-  padding: 80px 10% 40px;
+  padding: 80px 8% 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #1f242d;
+  background: #111;
 }
 
 .projects h2 {
   text-align: center;
-  font-size: 40px;
+  font-size: clamp(28px, 4vw, 40px); /* responsive title size */
   margin-bottom: 50px;
   color: #fff;
 }
@@ -22,11 +22,11 @@
   gap: 30px;
 }
 
-/* Only increasing card size */
+/* Project Card */
 .project-box {
-  flex: 1 1 380px;   /* bigger min width */
-  max-width: 420px;  /* bigger max width */
-  min-height: 500px; /* taller box */
+  flex: 1 1 320px;   /* min width for mobile */
+  max-width: 420px;  /* max width for desktop */
+  min-height: 460px; 
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -36,44 +36,47 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover effect: scale + smooth shadow */
 .project-box:hover {
-  transform: scale(1.05); /* scale up by 5% */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* deeper shadow */
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* Image inside card */
+.project-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
-/* Text content container */
+/* Title + Description */
 .project-box h4,
 .project-box p {
-  text-align: center;     /* center align */
-  padding: 0 20px;        /* equal side padding */
+  text-align: center;
+  padding: 0 20px;
 }
 
-/* Title */
 .project-box h4 {
-  font-size: 22px;
+  font-size: clamp(18px, 2.5vw, 22px);
   margin: 20px 0 12px;
   color: #0ef;
   font-weight: 600;
 }
 
-/* Description */
 .project-box p {
-  font-size: 15px;
+  font-size: clamp(13px, 2vw, 15px);
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* Button wrapper */
+/* Link button */
 .project-box a {
-  display: flex;                /* make it flexible */
-  justify-content: center;      /* center horizontally */
+  display: flex;
+  justify-content: center;
   align-items: center;
   width: 45px;
   height: 45px;
-  margin: 0 auto 20px;          /* auto centers + adds bottom spacing */
+  margin: auto auto 20px;
   background: #0ef;
   border-radius: 50%;
   color: #1f242d;
@@ -85,4 +88,25 @@
 .project-box a:hover {
   transform: scale(1.2);
   background: #fff;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .projects {
+    padding: 60px 5% 30px;
+  }
+  .project-box {
+    flex: 1 1 45%; /* two per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-box {
+    width: 100%; /* full width on mobile */
+    max-width: 95%;
+  }
 }

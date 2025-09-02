@@ -25,16 +25,29 @@ body{
     left: 0;
 }
  
+/* Make header fixed and responsive */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;        /* 👈 add this */
-    width: 100%;
-    padding: 20px 10%;
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgba(31, 36, 45, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+/* Fix sections so they align properly */
+section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -260,3 +273,143 @@ body{
 
 
 
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: rgba(31, 36, 45, 0.95);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .home {
+    padding: 60px 8% 0;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+  }
+
+  .home-content h3 {
+    font-size: 26px;
+  }
+
+  .home-img img {
+    max-width: 400px;
+  }
+}
+
+/* Tablets & Large Phones */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 5% 40px;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content h3 {
+    font-size: 22px;
+  }
+
+  .home-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .home-img {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-img img {
+    max-width: 320px;
+  }
+
+  .social-media a {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    margin: 10px 8px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .home {
+    padding: 90px 5% 30px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .home-img img {
+    max-width: 250px;
+  }
+
+  .social-media a {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
