@@ -1,0 +1,39 @@
+
+/* Fixed Navbar */
+.navbar {
+  position: fixed;            /* stays in place while scrolling */
+  top: 20px;                  /* distance from top edge */
+  left: 46%;                  /* start after left section width */
+  width: calc(44% - 40px);    /* fits nicely within right section */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242323;
+  padding: 14px 60px;
+  border-radius: 50px;
+  gap: 60px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  opacity: 0;
+}
+
+.navbar a:hover {
+  transform: scale(1.2);
+  color: #0ef;
+}
+
+.navbar a.active {
+  color: #0ef;
+}

@@ -1,174 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aditya Sawant | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/skill.css">
-  <link rel="stylesheet" href="css/project.css">
-  <link rel="stylesheet" href="css/contact.css">
-</head>
-<body>
-
-      <!-- Header -->
-    <header class="header">
-      <a href="#" class="logo">Portfolio.</a>
-
-      <!-- Hamburger Icon -->
-      <div class="hamburger" id="hamburger">
-        &#9776;
-      </div>
-
-      <nav class="navbar" id="navbar">
-        <a href="#home" style="--i:1" class="active">Home</a>
-        <a href="#about" style="--i:2">About</a>
-        <a href="#skills" style="--i:3">Skills</a>
-        <a href="#portfolio" style="--i:4">Projects</a>
-        <a href="#contact" style="--i:5">Contact</a>
-      </nav>
-    </header>
-
-
-  <!-- Home -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Hello, It's Me</h3>
-      <h1>Aditya Sawant</h1>
-      <h3>And I'm a <span class="multiple-text"></span></h3>
-      <p>
-        I’m a Computer Science graduate passionate about building dynamic web and mobile apps. 
-        Skilled in Java, Spring Boot, React, and Flutter.
-      </p>
-      <div class="social-media">
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <a href="resume.pdf" class="btn">Download Resume</a>
-    </div>
-    <div class="home-img">
-      <img src="assets/Portfolio.png" alt="Portfolio Image">
-    </div>
-  </section>
-
- <!-- About -->
-<section class="about" id="about">
-  <div class="about-content">
-    <h2 class="heading">About <span>Me</span></h2>
-    <h3 class="sub-heading">Full Stack Developer</h3>
-    
-    <p>
-      Hello! I’m <strong>Aditya Sawant</strong>, a passionate developer skilled in 
-      <span>Java, Spring Boot, React, and Flutter</span>. I enjoy building 
-      scalable applications and creating solutions that deliver real-world impact.
-    </p>
-    
-    <p>
-      Beyond coding, I explore emerging technologies, contribute to open source, 
-      and constantly sharpen my problem-solving mindset. My goal is to grow as a 
-      developer while making technology accessible and impactful.
-    </p>
-
-    <div class="about-buttons">
-      <a href="resume.pdf" class="btn">Download CV</a>
-      <a href="#skills" class="btn-outline">View My Skills</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Skills -->
-  <section class="skills" id="skills">
-    <h2 class="heading">My <span>Skills</span></h2>
-    <div class="skills-container">
-      <div class="skill-box">
-        <i class="fas fa-code"></i>
-        <h3>Web Development</h3>
-        <p>Responsive websites with HTML, CSS, JavaScript, React.</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-java"></i>
-        <h3>Java & Spring</h3>
-        <p>Backend development with Java, Spring Boot, Hibernate.</p>
-      </div>
-      <div class="skill-box">
-        <i class="fas fa-database"></i>
-        <h3>Databases</h3>
-        <p>Experience with MySQL, PostgreSQL, Firebase.</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-android"></i>
-        <h3>Mobile Apps</h3>
-        <p>Cross-platform apps with Flutter (Android/iOS).</p>
-      </div>
-      <div class="skill-box">
-        <i class="fas fa-network-wired"></i>
-        <h3>Networking</h3>
-        <p>Understanding of networks, security basics, and cloud.</p>
-      </div>
-      <div class="skill-box">
-        <i class="fab fa-github"></i>
-        <h3>Version Control</h3>
-        <p>Git & GitHub for collaboration and project management.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="portfolio">
-    <h2 class="heading">My <span>Projects</span></h2>
-    <div class="projects-container">
-      <div class="project-box">
-        <img src="assets/Project1.jpg" alt="Bookstore">
-        <h4>Bookstore Management</h4>
-        <p>Spring Boot + MySQL full-stack web app to manage books & orders.</p>
-        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <div class="project-box">
-        <img src="assets/Project1.jpg" alt="Hostel">
-        <h4>Hostel Management</h4>
-        <p>Java + Swing + MySQL desktop app for hostel allocation.</p>
-        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-      <div class="project-box">
-        <img src="assets/Project1.jpg" alt="Tourist App">
-        <h4>Tourist Hub App</h4>
-        <p>Flutter + Firebase app for travel package bookings.</p>
-        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-container">
-      <form action="#" class="contact-form">
-        <div class="input-box">
-          <input type="text" placeholder="Your Name" required>
-        </div>
-        <div class="input-box">
-          <input type="email" placeholder="Your Email" required>
-        </div>
-        <div class="input-box">
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

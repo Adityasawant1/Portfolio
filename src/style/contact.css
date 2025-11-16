@@ -1,0 +1,212 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  padding: 100px 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4),
+              0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+  /* Left Section */
+  .contact-left {
+    flex: 1;
+    padding-right: 40px;
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+.contact-left h2 {
+  font-size: 40px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.contact-left p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+/* Social Media icons */  
+.social {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 0.8rem; /* smaller gap between icons */
+  list-style: none;
+  margin-top: 20px;
+}
+
+.social li {
+  position: relative;
+  flex-basis: 3.2rem; /* smaller circle size (was 4.5rem) */
+}
+.social a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 1.2rem; /* smaller icon (was 1.75rem) */
+  color: #070707;
+  border: 1px solid;
+  margin-top: 20px;
+  border-radius: 100%;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.social a > i {
+  position: relative;
+  z-index: 1;
+}
+
+.social a::after {
+  position: absolute;
+  content: "";
+  inset: 100% 0 0;
+  background: var(--bg, #070707);
+  pointer-events: none;
+  transition: inset 0.3s ease-in-out;
+}
+
+.social a:hover,
+.social a:focus-visible {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.social a:hover::after,
+.social a:focus-visible::after {
+  inset-block-start: 0;
+}
+
+/* Right Section */
+.contact-right {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.contact-right h2 {
+  text-align: center;
+  color: #111;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-subtext {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Floating Input */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 18px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.form-group label {
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  color: #777;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  left: 15px;
+  font-size: 13px;
+  color: #007bff;
+  background: #fff;
+  padding: 0 5px;
+}
+
+/* Button */
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 51px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #111;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  left: 20%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .contact-left {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .contact-right {
+    padding-left: 0;
+  }
+}
