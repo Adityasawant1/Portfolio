@@ -1,4 +1,5 @@
 import React from "react";
+import Tilt from "react-parallax-tilt";
 import "../style/skill.css";
 
 const skillCategories = [
@@ -30,40 +31,40 @@ const skillCategories = [
     ],
   },
   {
-  title: "Mobile Development",
-  borderColor: "var(--skill-border-orange)",
-  skills: [
-    { name: "Flutter", icon: "devicon-flutter-plain colored" },
-    { name: "Dart", icon: "devicon-dart-plain colored" },
-    { name: "Java", icon: "devicon-java-plain colored" },
-    { name: "XML", icon: "devicon-xml-plain" },
-    { name: "React Native", icon: "devicon-react-original colored" },
-    { name: "Android Studio", icon: "devicon-androidstudio-plain colored" },
-  ],
-},
+    title: "Mobile Development",
+    borderColor: "var(--skill-border-orange)",
+    skills: [
+      { name: "Flutter", icon: "devicon-flutter-plain colored" },
+      { name: "Dart", icon: "devicon-dart-plain colored" },
+      { name: "Java", icon: "devicon-java-plain colored" },
+      { name: "XML", icon: "devicon-xml-plain" },
+      { name: "React Native", icon: "devicon-react-original colored" },
+      { name: "Android Studio", icon: "devicon-androidstudio-plain colored" },
+    ],
+  },
   {
-  title: "DevOps",
-  borderColor: "var(--skill-border-teal)",
-  skills: [
-    { name: "Linux", icon: "devicon-linux-plain" },
-    { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark colored" },
-    { name: "Git", icon: "devicon-git-plain colored" },
-    { name: "GitHub", icon: "devicon-github-original" },
-    { name: "Docker", icon: "devicon-docker-plain colored" },
-    { name: "Kubernetes", icon: "devicon-kubernetes-plain colored" },
-    { name: "Shell Scripting", icon: "devicon-bash-plain" },
-    { name: "CI/CD", icon: "devicon-githubactions-plain colored" },
-  ],
-},
+    title: "DevOps",
+    borderColor: "var(--skill-border-teal)",
+    skills: [
+      { name: "Linux", icon: "devicon-linux-plain" },
+      { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark colored" },
+      { name: "Git", icon: "devicon-git-plain colored" },
+      { name: "GitHub", icon: "devicon-github-original" },
+      { name: "Docker", icon: "devicon-docker-plain colored" },
+      { name: "Kubernetes", icon: "devicon-kubernetes-plain colored" },
+      { name: "Shell Scripting", icon: "devicon-bash-plain" },
+      { name: "CI/CD", icon: "devicon-githubactions-plain colored" },
+    ],
+  },
   {
     title: "Others",
     borderColor: "var(--skill-border-orange)",
     skills: [
-    { name: "VS Code", icon: "devicon-vscode-plain colored" },
-    { name: "Eclipse", icon: "devicon-eclipse-plain colored" },
-    { name: "IntelliJ IDEA", icon: "devicon-intellij-plain colored" },
-    { name: "Postman", icon: "devicon-postman-plain colored" },
-    { name: "Figma", icon: "devicon-figma-plain colored" },
+      { name: "VS Code", icon: "devicon-vscode-plain colored" },
+      { name: "Eclipse", icon: "devicon-eclipse-plain colored" },
+      { name: "IntelliJ IDEA", icon: "devicon-intellij-plain colored" },
+      { name: "Postman", icon: "devicon-postman-plain colored" },
+      { name: "Figma", icon: "devicon-figma-plain colored" },
     ],
   },
 ];
@@ -81,22 +82,29 @@ const SkillPage = () => {
 
       <div className="skill-categories-grid">
         {skillCategories.map((category, index) => (
-          <div
-            className={`skill-category-card ${index === skillCategories.length - 1 ? "skill-card-centered" : ""
-              }`}
+          <Tilt
             key={index}
-            style={{ borderColor: category.borderColor }}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
+            scale={1.02}
+            transitionSpeed={2500}
+            className={index === skillCategories.length - 1 ? "skill-card-centered" : ""}
           >
-            <h3 className="skill-category-title">{category.title}</h3>
-            <div className="skill-items-grid">
-              {category.skills.map((skill, idx) => (
-                <div className="skill-item" key={idx}>
-                  <i className={skill.icon}></i>
-                  <span>{skill.name}</span>
-                </div>
-              ))}
+            <div
+              className="skill-category-card"
+              style={{ borderColor: category.borderColor }}
+            >
+              <h3 className="skill-category-title">{category.title}</h3>
+              <div className="skill-items-grid">
+                {category.skills.map((skill, idx) => (
+                  <div className="skill-item" key={idx}>
+                    <i className={skill.icon}></i>
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </Tilt>
         ))}
       </div>
     </div>

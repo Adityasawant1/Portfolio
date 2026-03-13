@@ -5,29 +5,29 @@ import ProjectCard from "../components/projectCard";
 
 const projects = [
   {
-    title: "Client-Server Assistance System",
-    description:
-      "A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details.A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details.",
-    image:projectImg,
-    link: "#",
-    source: "#",
-  },  
-  {
-    title: "Avalon-Mobile App",
-    description:
-      "A web-based inventory and billing system built with Hibernate, JSP, and MySQL for managing book stock efficiently.",
-      image:projectImg,
+    title: "Real Time Chat Application",
+    description: "A robust platform for instantaneous communication. Features intuitive UI, secure connections, and real-time message handling from anywhere in the world.",
+    image: projectImg,
+    tags: ["#reactJS", "#socket.io", "#nodeJs", "#express"],
     link: "#",
     source: "#",
   },
-   {
-    title: "Client-Server Assistance System",
-    description:
-      "A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details.A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details.",
-    image:projectImg,
+  {
+    title: "Vercel Clone - Deploy Projects",
+    description: "Simplifies web deployment. With just one click, users can host their projects seamlessly. Features Git integration, automatic scaling, and hassle-free deployment.",
+    image: projectImg,
+    tags: ["#nextJS", "#tailwind", "#AWS", "#docker", "#ECS"],
     link: "#",
     source: "#",
-  },  
+  },
+  {
+    title: "Client-Server System",
+    description: "A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details securely.",
+    image: projectImg,
+    tags: ["#java", "#swing", "#mysql", "#desktop"],
+    link: "#",
+    source: "#",
+  },
 ];
 
 const ProjectPage = () => {
@@ -49,6 +49,7 @@ const ProjectPage = () => {
             title={proj.title}
             description={proj.description}
             image={proj.image}
+            tags={proj.tags}
             link={proj.link}
             source={proj.source}
           />
