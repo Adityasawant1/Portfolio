@@ -15,6 +15,18 @@ const skillCategories = [
     ],
   },
   {
+    title: "Mobile Development",
+    borderColor: "var(--skill-border-orange)",
+    skills: [
+      { name: "Flutter", icon: "devicon-flutter-plain colored" },
+      { name: "Dart", icon: "devicon-dart-plain colored" },
+      { name: "Java", icon: "devicon-java-plain colored" },
+      { name: "XML", icon: "devicon-xml-plain" },
+      { name: "React Native", icon: "devicon-react-original colored" },
+      { name: "Android Studio", icon: "devicon-androidstudio-plain colored" },
+    ],
+  },
+  {
     title: "Backend",
     borderColor: "var(--skill-border-teal)",
     skills: [
@@ -30,18 +42,7 @@ const skillCategories = [
       { name: "Kafka", icon: "devicon-apachekafka-original" },
     ],
   },
-  {
-    title: "Mobile Development",
-    borderColor: "var(--skill-border-orange)",
-    skills: [
-      { name: "Flutter", icon: "devicon-flutter-plain colored" },
-      { name: "Dart", icon: "devicon-dart-plain colored" },
-      { name: "Java", icon: "devicon-java-plain colored" },
-      { name: "XML", icon: "devicon-xml-plain" },
-      { name: "React Native", icon: "devicon-react-original colored" },
-      { name: "Android Studio", icon: "devicon-androidstudio-plain colored" },
-    ],
-  },
+  
   {
     title: "DevOps",
     borderColor: "var(--skill-border-teal)",
