@@ -21,18 +21,19 @@
   font-family: "Poppins", sans-serif;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .contact-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4),
-              0 10px 30px rgba(0, 0, 0, 0.3);
+    0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-  /* Left Section */
-  .contact-left {
-    flex: 1;
-    padding-right: 40px;
-    border-right: 2px solid rgba(0, 0, 0, 0.1);
-  }
+/* Left Section */
+.contact-left {
+  flex: 1;
+  padding-right: 40px;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
 
 .contact-left h2 {
   font-size: 40px;
@@ -52,27 +53,31 @@
 }
 
 
-/* Social Media icons */  
+/* Social Media icons */
 .social {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  gap: 0.8rem; /* smaller gap between icons */
+  gap: 0.8rem;
+  /* smaller gap between icons */
   list-style: none;
   margin-top: 20px;
 }
 
 .social li {
   position: relative;
-  flex-basis: 3.2rem; /* smaller circle size (was 4.5rem) */
+  flex-basis: 3.2rem;
+  /* smaller circle size (was 4.5rem) */
 }
+
 .social a {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
-  font-size: 1.2rem; /* smaller icon (was 1.75rem) */
+  font-size: 1.2rem;
+  /* smaller icon (was 1.75rem) */
   color: #070707;
   border: 1px solid;
   margin-top: 20px;
@@ -83,7 +88,7 @@
   transition: color 0.3s ease-in-out, transform 0.2s ease;
 }
 
-.social a > i {
+.social a>i {
   position: relative;
   z-index: 1;
 }
@@ -163,10 +168,10 @@
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
 }
 
-.form-group input:focus + label,
-.form-group input:valid + label,
-.form-group textarea:focus + label,
-.form-group textarea:valid + label {
+.form-group input:focus+label,
+.form-group input:valid+label,
+.form-group textarea:focus+label,
+.form-group textarea:valid+label {
   top: -10px;
   left: 15px;
   font-size: 13px;
@@ -193,7 +198,11 @@
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 80px 20px 40px;
+  }
+
   .contact-card {
     flex-direction: column;
     padding: 40px 30px;
@@ -208,5 +217,75 @@
 
   .contact-right {
     padding-left: 0;
+  }
+
+  .button {
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-left h2 {
+    font-size: 32px;
+  }
+
+  .contact-right h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 60px 15px 30px;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .contact-details p {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .social {
+    gap: 0.5rem;
+  }
+
+  .social li {
+    flex-basis: 2.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    top: 12px;
+  }
+
+  .button {
+    padding: 0.8em 1.5em;
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 }

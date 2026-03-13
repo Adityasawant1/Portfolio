@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   width: 100%;
   max-width: 1000px;
   background: rgba(255, 255, 255, 0.8);
@@ -11,13 +11,13 @@
   border-radius: 25px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  
+
 }
 
 .project-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15),
-              0 4px 12px rgba(0, 0, 0, 0.1);
+    0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -43,15 +43,41 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ exactly 2 cards per row */
+  grid-template-columns: repeat(2, 1fr);
+  /* ✅ exactly 2 cards per row */
   gap: 40px;
   width: 100%;
   max-width: 900px;
   justify-items: center;
 }
 
+@media (max-width: 1024px) {
+  .project-container {
+    padding: 40px 20px;
+  }
+
+  .project-grid {
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr; /* ✅ 1 card per row on small screens */
+    grid-template-columns: 1fr;
+    /* ✅ 1 card per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-container {
+    padding: 30px 15px;
+  }
+
+  .project-header h2 {
+    font-size: 32px;
+  }
+
+  .project-header p {
+    font-size: 14px;
   }
 }

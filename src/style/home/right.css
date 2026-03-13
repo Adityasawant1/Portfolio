@@ -1,10 +1,13 @@
-
 /* Fixed Navbar */
 .navbar {
-  position: fixed;            /* stays in place while scrolling */
-  top: 20px;                  /* distance from top edge */
-  left: 46%;                  /* start after left section width */
-  width: calc(44% - 40px);    /* fits nicely within right section */
+  position: fixed;
+  /* stays in place while scrolling */
+  top: 20px;
+  /* distance from top edge */
+  left: 46%;
+  /* start after left section width */
+  width: calc(44% - 40px);
+  /* fits nicely within right section */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -36,4 +39,94 @@
 
 .navbar a.active {
   color: #0ef;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  font-size: 36px;
+  color: #111;
+  cursor: pointer;
+  z-index: 1001;
+  /* Above the navbar to close it */
+}
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    top: 15px;
+    gap: 30px;
+    padding: 12px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+  }
+
+  /* Right Section top padding needs adjustment for fixed hamburger */
+  .right-section {
+    padding-top: 80px;
+  }
+
+  /* Convert horizontal navbar to vertical overlay menu */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Hide off-screen to the left initially */
+    transform: none;
+    /* remove centering transform */
+    width: 250px;
+    height: 100vh;
+    background: rgba(36, 35, 35, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+    transition: left 0.4s ease;
+  }
+
+  /* Active state when menu is open */
+  .navbar.active {
+    left: 0;
+  }
+
+  .navbar a {
+    font-size: 22px;
+    opacity: 1;
+    /* reset opacity since animation delays might prevent showing */
+    animation: none;
+    /* disabled slide-in animation inside menu for simplicity */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+  }
+
+  .navbar {
+    width: 100%;
+    /* Full screen menu on very small phones */
+  }
 }

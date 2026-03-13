@@ -1,22 +1,20 @@
-
-
 .home-container {
   display: flex;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .left-section {
-  position: fixed;          
+  position: fixed;
   top: 0;
   left: 0;
   width: 36%;
-  height: 100vh;              
+  height: 100vh;
   background-color: #93c5f9;
   padding: 20px;
-  overflow-y: auto;        
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); 
-  z-index: 10;              
+  overflow-y: auto;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .left-section::-webkit-scrollbar {
@@ -35,8 +33,8 @@
   margin-left: 36%;
   width: 64%;
   min-height: 100vh;
-  background-color: 
-#efece3;
+  background-color:
+    #efece3;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -45,14 +43,31 @@
 }
 
 
-/* Responsive  */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 1024px) {
   .home-container {
     flex-direction: column;
+    height: auto;
   }
 
-  .left-section,
+  .left-section {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
   .right-section {
     width: 100%;
+    margin-left: 0;
+    padding-top: 100px;
+    /* Leave space for floating navbar */
+  }
+}
+
+@media (max-width: 480px) {
+  .right-section {
+    padding-top: 80px;
   }
 }

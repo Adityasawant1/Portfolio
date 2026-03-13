@@ -21,7 +21,8 @@
 .card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills the card area while maintaining aspect ratio */
+  object-fit: cover;
+  /* fills the card area while maintaining aspect ratio */
   border-radius: 15px;
   transition: all 0.5s ease;
 }
@@ -35,7 +36,8 @@
 /* ✅ Content overlay on hover */
 .card__content {
   position: absolute;
-  inset: 0; /* replaces top, left, right, bottom = 0 */
+  inset: 0;
+  /* replaces top, left, right, bottom = 0 */
   background-color: rgba(242, 242, 242, 0.95);
   border-radius: 15px;
   padding: 20px;
@@ -99,12 +101,18 @@
   background: #777;
   color: white;
 }
+
 .card_button {
-  padding: 0.7em 1.6em;  /* reduced padding */
-  font-size: 13px;       /* slightly smaller text */
-  border-radius: 40px;   /* proportionally smaller curve */
-  letter-spacing: 2px;   /* tighter spacing for smaller button */
-  margin-top: 10px;      /* reduced top spacing */
+  padding: 0.7em 1.6em;
+  /* reduced padding */
+  font-size: 13px;
+  /* slightly smaller text */
+  border-radius: 40px;
+  /* proportionally smaller curve */
+  letter-spacing: 2px;
+  /* tighter spacing for smaller button */
+  margin-top: 10px;
+  /* reduced top spacing */
   border: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -144,10 +152,42 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .card {
+    width: 320px;
+    height: 260px;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     width: 100%;
-    max-width: 320px;
-    height: 260px;
+    max-width: 350px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 240px;
+  }
+
+  .card__content {
+    padding: 15px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__description {
+    font-size: 12px;
+    margin: 8px 0 10px;
+  }
+
+  .card_button {
+    margin: 10px;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
   }
 }
