@@ -64,11 +64,15 @@ const ContactRightSection = () => {
                 </a>
               </li>
 
-              <li style={{ "--bg": "#ff0000" }}>
-                <a href="https://www.youtube.com/@optimisticweb" aria-label="YouTube">
-                  <i className="fa-brands fa-youtube"></i>
-                </a>
-              </li>
+              <li style={{ "--bg": "#FFA116" }}>
+              <a href="https://leetcode.com/u/Sawant_005/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leetcode/leetcode-original.svg" 
+                  alt="LeetCode" 
+                  style={{ width: "20px", height: "20px" }}
+                />
+              </a>
+            </li>
 
               <li
 

@@ -107,6 +107,18 @@
   color: #fff;
   transform: scale(1.05);
 }
+/* Default state */
+.social a img {
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  transition: filter 0.3s ease;
+}
+
+/* Hover state → make icon white */
+.social a:hover img {
+  filter: brightness(0) invert(1);
+}
 
 .social a:hover::after,
 .social a:focus-visible::after {

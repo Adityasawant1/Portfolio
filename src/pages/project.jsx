@@ -6,22 +6,34 @@ import ProjectCard from "../components/projectCard";
 
 const projects = [
   {
-  title: "Contact Management System",
-  description: "Built a full-stack Contact Management System using React.js and Spring Boot with JWT-based authentication and authorization. Implemented a User–Contact one-to-many relationship using Hibernate/JPA with MySQL (AWS RDS) for data management. Integrated AWS S3 for contact image storage and deployed the backend on AWS EC2 and the frontend on Vercel, ensuring a secure and scalable application.",
-  image: projectImg,
-  tags: ["#reactJS", "#Spring Boot", "#MySQL", "#AWS"],
-  link: "#",
-  source: "https://github.com/Adityasawant1/ContactAppFrontend",
-},
-  
- {
-  title: "Client-Server Assistance System",
-  description: "Developed a real-time Java-based client-server support system using socket programming for seamless communication between students and lab technicians, with IP-based device identification for accurate request tracking. Integrated MySQL using JDBC to manage request statuses and generated automated PDF reports using the iText library, improving issue reporting and overall lab efficiency.",
-  image: projectImg1,
-  tags: ["#java", "#socketProgramming", "#mysql", "#jdbc", "#iText"],
-  link: "#",
-  source: "https://github.com/Adityasawant1/ClientServer-",
-}
+    title: "RealMart – Quick Commerce Application",
+    description:
+      "Built a full-stack quick commerce application using Flutter and Spring Boot, enabling product browsing, cart management, and order placement. Designed RESTful APIs for order, authentication, and payment workflows. Integrated Razorpay payment gateway with webhooks for real-time payment verification. Implemented JWT-based authentication and developed scalable backend architecture using Hibernate/JPA and MySQL.",
+    image: projectImg, // add your image here
+    tags: ["#Flutter", "#SpringBoot", "#MySQL", "#Razorpay", "#JWT", "#RESTAPI"],
+    link: "#", // add live link if deployed
+    source: "https://github.com/your-username/realmart", // update repo link
+  },
+
+  {
+    title: "Contact Management System",
+    description:
+      "Developed a scalable full-stack web application using React.js and Spring Boot following MVC architecture. Implemented JWT-based authentication with role-based access control (RBAC). Designed RESTful APIs and managed relational data using Hibernate/JPA with MySQL (AWS RDS). Integrated AWS S3 for image storage and deployed backend on AWS EC2 and frontend on Vercel.",
+    image: projectImg,
+    tags: ["#ReactJS", "#SpringBoot", "#MySQL", "#AWS", "#JWT", "#RESTAPI"],
+    link: "#",
+    source: "https://github.com/Adityasawant1/ContactAppFrontend",
+  },
+
+  {
+    title: "Client-Server Assistance System",
+    description:
+      "Developed a real-time client-server application using Java Socket Programming with multi-threaded architecture for handling concurrent requests. Implemented IP-based device tracking for accurate request management. Integrated MySQL using JDBC for persistent storage and automated PDF report generation using the iText library.",
+    image: projectImg1,
+    tags: ["#Java", "#SocketProgramming", "#Multithreading", "#MySQL", "#JDBC"],
+    link: "#",
+    source: "https://github.com/Adityasawant1/ClientServer-",
+  }
 ];
 
 const ProjectPage = () => {

@@ -57,8 +57,13 @@ const Home = () => {
             <div className="social-media">
               <a href="https://www.linkedin.com/in/sawantaditya-96k/" target='_blank'><i className="bx bxl-linkedin"></i></a>
               <a href="https://github.com/Adityasawant1"><i className="bx bxl-github"></i></a>
+              <a href="https://leetcode.com/u/Sawant_005/"><img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leetcode/leetcode-original.svg" 
+    alt="LeetCode" 
+    style={{ width: "24px", height: "24px" }}
+  /></a>
               <a href="https://www.instagram.com/adi_sawant_96/"><i className="bx bxl-instagram"></i></a>
-              <a href="#"><i className="bx bxl-facebook"></i></a>
+              
             </div>
           </div>
         </section>
