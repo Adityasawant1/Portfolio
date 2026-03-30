@@ -13,9 +13,7 @@ const ProjectCard = ({ title, description, image, link, source, tags = [] }) => 
             className="card__image"
           />
           <div className="card__floating-links">
-            <a href={link} aria-label="Live Demo" target="_blank" rel="noopener noreferrer">
-              <i className="fa-solid fa-globe"></i>
-            </a>
+            
             <a href={source} aria-label="Source Code" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-github"></i>
             </a>

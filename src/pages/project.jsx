@@ -1,33 +1,27 @@
 import React from "react";
 import "../style/project.css";
-import projectImg from '../assets/flight.jpg';
+import projectImg from '../assets/profileImage.png';
+import projectImg1 from '../assets/lan.png';
 import ProjectCard from "../components/projectCard";
 
 const projects = [
   {
-    title: "Real Time Chat Application",
-    description: "A robust platform for instantaneous communication. Features intuitive UI, secure connections, and real-time message handling from anywhere in the world.",
-    image: projectImg,
-    tags: ["#reactJS", "#socket.io", "#nodeJs", "#express"],
-    link: "#",
-    source: "#",
-  },
-  {
-    title: "Vercel Clone - Deploy Projects",
-    description: "Simplifies web deployment. With just one click, users can host their projects seamlessly. Features Git integration, automatic scaling, and hassle-free deployment.",
-    image: projectImg,
-    tags: ["#nextJS", "#tailwind", "#AWS", "#docker", "#ECS"],
-    link: "#",
-    source: "#",
-  },
-  {
-    title: "Client-Server System",
-    description: "A Java Swing & MySQL-based desktop app to manage student records, room allocation, and fee details securely.",
-    image: projectImg,
-    tags: ["#java", "#swing", "#mysql", "#desktop"],
-    link: "#",
-    source: "#",
-  },
+  title: "Contact Management System",
+  description: "Built a full-stack Contact Management System using React.js and Spring Boot with JWT-based authentication and authorization. Implemented a User–Contact one-to-many relationship using Hibernate/JPA with MySQL (AWS RDS) for data management. Integrated AWS S3 for contact image storage and deployed the backend on AWS EC2 and the frontend on Vercel, ensuring a secure and scalable application.",
+  image: projectImg,
+  tags: ["#reactJS", "#Spring Boot", "#MySQL", "#AWS"],
+  link: "#",
+  source: "https://github.com/Adityasawant1/ContactAppFrontend",
+},
+  
+ {
+  title: "Client-Server Assistance System",
+  description: "Developed a real-time Java-based client-server support system using socket programming for seamless communication between students and lab technicians, with IP-based device identification for accurate request tracking. Integrated MySQL using JDBC to manage request statuses and generated automated PDF reports using the iText library, improving issue reporting and overall lab efficiency.",
+  image: projectImg1,
+  tags: ["#java", "#socketProgramming", "#mysql", "#jdbc", "#iText"],
+  link: "#",
+  source: "https://github.com/Adityasawant1/ClientServer-",
+}
 ];
 
 const ProjectPage = () => {

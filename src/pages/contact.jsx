@@ -54,12 +54,12 @@ const ContactRightSection = () => {
           <div className="social-links">
             <ul className="social">
               <li style={{ "--bg": "#2356f6" }}>
-                <a href="#" aria-label="Behance">
+                <a href="https://www.linkedin.com/in/sawantaditya-96k/" aria-label="Behance">
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
               </li>
               <li style={{ "--bg": "#101419" }}>
-                <a href="https://twitter.com/optimisticweb" aria-label="Twitter">
+                <a href="https://github.com/Adityasawant1" aria-label="Twitter">
                   <i className="fa-brands fa-github"></i>
                 </a>
               </li>
@@ -77,7 +77,7 @@ const ContactRightSection = () => {
                     "linear-gradient(-45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",
                 }}
               >
-                <a href="https://www.instagram.com/optimisticweb" aria-label="Instagram">
+                <a href="https://www.instagram.com/adi_sawant_96/" aria-label="Instagram">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
